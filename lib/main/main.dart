@@ -131,20 +131,47 @@ class _MoreStoriesState extends State<MoreStories> {
                   ),
                   Expanded(
                       child: Padding(
-                    padding: const EdgeInsets.all(24.0),
-                    child: Text(
-                      "fsafsaf",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  )),
+                          padding: const EdgeInsets.all(16.0),
+                          child: RaisedButton(
+                              color: Colors.green,
+                              onPressed: () {},
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    "Assista",
+                                    style: TextStyle(
+                                        fontSize: 14.0, color: Colors.white),
+                                  ),
+                                  SizedBox(
+                                    width: 2.0,
+                                  ),
+                                  Icon(
+                                    Icons.play_arrow,
+                                    color: Colors.white,
+                                    size: 16.0,
+                                  ),
+                                ],
+                              )))),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(24.0),
-                      child: Text(
-                        "fsafsaf",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            Icons.info_outline,
+                            color: Colors.white,
+                            size: 16.0,
+                          ),
+                          SizedBox(width: 5.0),
+                          Text(
+                            "Saiba mais",
+                            style:
+                                TextStyle(fontSize: 14.0, color: Colors.white),
+                          ),
+                        ],
                       ),
                     ),
                   ),
