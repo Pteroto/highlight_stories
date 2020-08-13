@@ -144,6 +144,7 @@ class _MoreStoriesState extends State<MoreStories> {
                     child: Padding(
                       padding: const EdgeInsets.all(24.0),
                       child: Column(
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
