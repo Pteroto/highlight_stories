@@ -153,24 +153,10 @@ class _MoreStoriesState extends State<MoreStories> {
       ),
       body: StoryView(
         storyItems: [
-          StoryItem.text(
-            title: "I guess you'd love to see more of our food. That's great.",
-            backgroundColor: Colors.blue,
-
-          ),
-          StoryItem.text(
-            title: "Nice!\n\nTap to continue.",
-            backgroundColor: Colors.red,
-            textStyle: TextStyle(
-              fontFamily: 'Dancing',
-              fontSize: 40,
-            ),
-          ),
-          StoryItem.pageImage(
-            url:
-            "https://image.ibb.co/cU4WGx/Omotuo-Groundnut-Soup-braperucci-com-1.jpg",
-            caption: "Still sampling",
+          StoryItem.pageVideo(
+            "https://static.videezy.com/system/resources/previews/000/005/529/original/Reaviling_Sjusj%C3%B8en_Ski_Senter.mp4",
             controller: storyController,
+            caption: "Still sampling",
           ),
           StoryItem.pageImage(
               url: "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif",
