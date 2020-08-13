@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
 
@@ -92,34 +93,63 @@ class _MoreStoriesState extends State<MoreStories> {
         ),
         backgroundColor: Colors.green,
       ),
-      body: StoryView(
-        storyItems: [
-          StoryItem.pageVideo(
-            "https://static.videezy.com/system/resources/previews/000/005/529/original/Reaviling_Sjusj%C3%B8en_Ski_Senter.mp4",
-            controller: storyController,
-          ),
-          StoryItem.pageImage(
-              url: "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif",
-              controller: storyController),
-          StoryItem.pageImage(
-            url: "https://media.giphy.com/media/XcA8krYsrEAYXKf4UQ/giphy.gif",
-            controller: storyController,
-          ),
-          StoryItem.pageImage(
-            url: "https://media.giphy.com/media/XcA8krYsrEAYXKf4UQ/giphy.gif",
-            controller: storyController,
-          ),
-        ],
-        onStoryShow: (s) {
-          print("Showing a story");
-        },
-        onComplete: () {
-          Navigator.of(context).pop();
-          print("Completed a cycle");
-        },
-        progressPosition: ProgressPosition.top,
-        repeat: false,
-        controller: storyController,
+      body: SafeArea(
+        child:
+        new Stack(
+          children: [
+            StoryView(
+              storyItems: [
+                StoryItem.pageVideo(
+                    "https://firebasestorage.googleapis.com/v0/b/highlightstories-37942.appspot.com/o/canal-brasil.mp4?alt=media&token=6b5c59a7-a4f4-4a0d-84c3-d849c1ad9a2d",
+                    controller: storyController,
+                    imageFit: BoxFit.fill),
+                StoryItem.pageImage(
+                    url:
+                        "https://media.giphy.com/media/26ybxpCtI2tMGBtEA/source.gif",
+                    controller: storyController),
+                StoryItem.pageImage(
+                  url:
+                      "https://media.giphy.com/media/26ybxpCtI2tMGBtEA/source.gif",
+                  controller: storyController,
+                ),
+                StoryItem.pageImage(
+                  url:
+                      "https://media.giphy.com/media/26ybxpCtI2tMGBtEA/source.gif",
+                  controller: storyController,
+                ),
+              ],
+              onStoryShow: (s) {
+                print("Showing a story");
+              },
+              onComplete: () {
+                Navigator.of(context).pop();
+                print("Completed a cycle");
+              },
+              progressPosition: ProgressPosition.top,
+              repeat: false,
+              controller: storyController,
+            ),
+            new Align(
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                children: [
+                  Text(
+                    "fsafsaf",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    "fsafsaf",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    "fsafsaf",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
