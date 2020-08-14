@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../common.dart';
+
 class StoriesButtons extends StatefulWidget {
   @override
   _StoriesButtonsState createState() => _StoriesButtonsState();
@@ -85,7 +87,7 @@ class _StoriesButtonsState extends State<StoriesButtons> {
                     height: 36,
                     child: Icon(Icons.close, color: Colors.white)),
                 onTap: () {
-                  Navigator.of(context).pop();
+                  Common.backToNative();
                 },
               ),
             ),

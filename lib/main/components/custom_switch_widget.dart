@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:story_view/story_view.dart';
 
 import '../urls.dart';
+import '../common.dart';
 
 class CustomSwitchWidget extends StatelessWidget {
-  const CustomSwitchWidget({
-    Key key,
-    @required this.storyController,
-  }) : super(key: key);
+  const CustomSwitchWidget({Key key, @required this.storyController})
+      : super(key: key);
 
   final StoryController storyController;
 
@@ -23,7 +22,7 @@ class CustomSwitchWidget extends StatelessWidget {
         print("Showing a story");
       },
       onComplete: () {
-        Navigator.of(context).pop();
+        Common.backToNative();
         print("Completed a cycle");
       },
       progressPosition: ProgressPosition.top,
@@ -32,7 +31,7 @@ class CustomSwitchWidget extends StatelessWidget {
       onVerticalSwipeComplete: (direction) {
         switch (direction) {
           case Direction.down:
-            Navigator.of(context).pop();
+            Common.backToNative();
             break;
           default:
             break;

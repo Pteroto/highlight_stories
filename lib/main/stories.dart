@@ -6,7 +6,6 @@ import 'package:story_view/story_view.dart';
 
 import 'components/stories_buttons_widget.dart';
 
-
 class Stories extends StatefulWidget {
   @override
   _StoriesState createState() => _StoriesState();
