@@ -9,17 +9,14 @@ class Common {
   }
 
   static void setHandler() {
-    PLATFORM_CHANNEL.setMethodCallHandler(getDataFromNative);
+    PLATFORM_CHANNEL.setMethodCallHandler(close);
   }
 
-  static Future<dynamic> getDataFromNative(MethodCall call) async {
+  static Future<dynamic> close(MethodCall call) async {
     switch (call.method) {
-      case 'sendSlugsToStories':
-        print(call.arguments);
+      case 'closeFlutter':
+        SystemNavigator.pop();
         break;
-
-      default:
-        return;
     }
   }
 }
