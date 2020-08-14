@@ -28,7 +28,7 @@ class _StoriesButtonsState extends State<StoriesButtons> {
                 child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: RaisedButton(
-                        color: Colors.green,
+                        color: Colors.white,
                         onPressed: () {},
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,14 +36,14 @@ class _StoriesButtonsState extends State<StoriesButtons> {
                             Text(
                               "Assista",
                               style: TextStyle(
-                                  fontSize: 14.0, color: Colors.white),
+                                  fontSize: 14.0, color: Colors.black),
                             ),
                             SizedBox(
                               width: 2.0,
                             ),
                             Icon(
                               Icons.play_arrow,
-                              color: Colors.white,
+                              color: Colors.black,
                               size: 16.0,
                             ),
                           ],
@@ -81,7 +81,7 @@ class _StoriesButtonsState extends State<StoriesButtons> {
             child: Material(
               color: Colors.black45,
               child: InkWell(
-                splashColor: Colors.green, // inkwell color
+                splashColor: Colors.white, // inkwell color
                 child: SizedBox(
                     width: 36,
                     height: 36,
