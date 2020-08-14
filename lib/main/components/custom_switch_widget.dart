@@ -3,12 +3,14 @@ import 'package:story_view/story_view.dart';
 
 import '../urls.dart';
 import '../common.dart';
+import '../components/stories_buttons_widget.dart';
 
 class CustomSwitchWidget extends StatelessWidget {
-  const CustomSwitchWidget({Key key, @required this.storyController})
+  CustomSwitchWidget({Key key, @required this.storyController})
       : super(key: key);
 
   final StoryController storyController;
+  final List<int> stories = [];
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,9 @@ class CustomSwitchWidget extends StatelessWidget {
               controller: storyController, imageFit: BoxFit.fitHeight))
           .toList(),
       onStoryShow: (s) {
+        if(!stories.contains(s.hashCode)) stories.add(s.hashCode);
         print("Showing a story");
+        StoriesButtons().setStyle(Urls().getLogo(stories.indexOf(s.hashCode)));
       },
       onComplete: () {
         Common.backToNative();

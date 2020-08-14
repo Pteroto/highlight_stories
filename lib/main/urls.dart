@@ -1,18 +1,13 @@
 class Urls {
-  final List<String> videos = [
-    "canal-off",
-    "globonews",
-    "gnt",
-    "multishow",
-    "viva",
-    "gloob",
-    "canal-brasil",
-    "studio-universal"
-  ];
+  final List<String> videos = ["canal-brasil", "gnt", "gloob", "globonews", "multishow", "canal-off", "studio-universal", "viva"];
   final String baseUrl1 =
       "https://firebasestorage.googleapis.com/v0/b/highlightstories-37942.appspot.com/o/stories%2F";
   final String baseUrl2 =
       ".mp4?alt=media&token=db83b9a3-7f90-4ff4-a464-187224728b2e";
+  final String logoBaseUrl1 = 
+      "https://firebasestorage.googleapis.com/v0/b/highlightstories-37942.appspot.com/o/logos%2F";
+  final String logoBaseUrl2 =
+      ".png?alt=media&token=db83b9a3-7f90-4ff4-a464-187224728b2e";
 
   List<String> getVideos() {
     List<String> finalUrl = [];
@@ -22,4 +17,9 @@ class Urls {
 
     return finalUrl;
   }
+
+  String getLogo(int index) {
+    return logoBaseUrl1 + videos[index] + logoBaseUrl2;
+  }
 }
+
