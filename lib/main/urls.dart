@@ -1,5 +1,14 @@
 class Urls {
-  final List<String> videos = ["canal-brasil", "gnt", "gloob", "globonews", "multishow", "canal-off", "studio-universal", "viva"];
+  final List<String> videos = [
+    "canal-off",
+    "globonews",
+    "gnt",
+    "multishow",
+    "viva",
+    "gloob",
+    "canal-brasil",
+    "studio-universal"
+  ];
   final String baseUrl1 =
       "https://firebasestorage.googleapis.com/v0/b/highlightstories-37942.appspot.com/o/stories%2F";
   final String baseUrl2 =

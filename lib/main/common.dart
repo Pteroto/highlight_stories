@@ -7,4 +7,19 @@ class Common {
   static void backToNative() {
     PLATFORM_CHANNEL.invokeMethod('backToNative');
   }
+
+  static void setHandler() {
+    PLATFORM_CHANNEL.setMethodCallHandler(getDataFromNative);
+  }
+
+  static Future<dynamic> getDataFromNative(MethodCall call) async {
+    switch (call.method) {
+      case 'sendSlugsToStories':
+        print(call.arguments);
+        break;
+
+      default:
+        return;
+    }
+  }
 }
