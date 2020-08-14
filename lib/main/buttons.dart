@@ -15,13 +15,13 @@ class _StoriesButtonsState extends State<StoriesButtons> {
         child: Row(
           children: [
             Expanded(
-                child: Padding(
-                    padding: const EdgeInsets.all(24.0),
-                    child: Image.network('https://vignette.wikia.nocookie.net/logopedia/images/a/a0/Globosat_Play_logo_%282%29.png/revision/latest?cb=20151118231028',
-                        height: 35
-                      ),
-                    ),
-                  ),
+              child: Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Image.network(
+                    'https://vignette.wikia.nocookie.net/logopedia/images/a/a0/Globosat_Play_logo_%282%29.png/revision/latest?cb=20151118231028',
+                    height: 35),
+              ),
+            ),
             Expanded(
                 child: Padding(
                     padding: const EdgeInsets.all(16.0),
