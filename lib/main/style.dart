@@ -20,11 +20,11 @@ class Themes {
     cursorColor: lightAccent,
     scaffoldBackgroundColor: lightBG,
     inputDecorationTheme:
-    InputDecorationTheme(labelStyle: TextStyle(color: Colors.black87)),
+        InputDecorationTheme(labelStyle: TextStyle(color: Colors.black87)),
     appBarTheme: AppBarTheme(
       elevation: 0,
       textTheme: TextTheme(
-        title: TextStyle(
+        headline6: TextStyle(
           color: darkBG,
           fontSize: 18.0,
           fontWeight: FontWeight.w800,

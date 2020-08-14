@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:highlight_stories/main/urls.dart';
+import 'package:highlight_stories/main/components/custom_switch_widget.dart';
+import 'package:story_view/controller/story_controller.dart';
 import 'package:story_view/story_view.dart';
-import 'buttons.dart';
+
+import 'components/stories_buttons_widget.dart';
+
 
 class Stories extends StatefulWidget {
   @override
@@ -23,32 +26,7 @@ class _StoriesState extends State<Stories> {
     return Scaffold(
       body: new Stack(
         children: [
-          StoryView(
-            storyItems: Urls()
-                .getVideos()
-                .map((name) => new StoryItem.pageVideo(name,
-                    controller: storyController, imageFit: BoxFit.fitHeight))
-                .toList(),
-            onStoryShow: (s) {
-              print("Showing a story");
-            },
-            onComplete: () {
-              Navigator.of(context).pop();
-              print("Completed a cycle");
-            },
-            progressPosition: ProgressPosition.top,
-            repeat: false,
-            controller: storyController,
-            onVerticalSwipeComplete: (direction) {
-              switch (direction) {
-                case Direction.down:
-                  Navigator.of(context).pop();
-                  break;
-                default:
-                  break;
-              }
-            },
-          ),
+          CustomSwitchWidget(storyController: storyController),
           StoriesButtons()
         ],
       ),
